@@ -75,18 +75,19 @@ var pointsleft = function (plan) {
 
 document.getElementById("daysleft").innerHTML = `${daysleft()} days left in the quarter`;
 
-
 function display(num) {
     if (num == 1)
     {
-        return document.getElementById('show').innerHTML = pointsleft('banana');
+        document.getElementById('show').innerHTML = pointsleft('banana');
+        document.getElementById('comment').innerHTML = 'Eat up or swipe me in  - your local starved off-campus student';
     }
     else if (num == 2)
     {
-        return document.getElementById('show').innerHTML = pointsleft('gold');
+        document.getElementById('show').innerHTML = pointsleft('gold');
+        document.getElementById('comment').innerHTML = 'What kind of vegetable is known for spoiling? A leek. We know, we are so funny';
     }
     else
     {
-        return document.getElementById('show').innerHTML = pointsleft('blue');
+        document.getElementById('show').innerHTML = pointsleft('blue');
+        document.getElementById('comment').innerHTML = 'What is the best food when you are so hungry you could eat a house? Cottage cheese and wall nuts ';
     }
-}

@@ -79,15 +79,16 @@ function display(num) {
     if (num == 1)
     {
         document.getElementById('show').innerHTML = pointsleft('banana');
-        document.getElementById('comment').innerHTML = 'Eat up or swipe me in  - your local starved off-campus student';
+        document.getElementById('comment').innerHTML = 'Do you really eat 21 meals a week?';
     }
     else if (num == 2)
     {
         document.getElementById('show').innerHTML = pointsleft('gold');
-        document.getElementById('comment').innerHTML = 'What kind of vegetable is known for spoiling? A leek. We know, we are so funny';
+        document.getElementById('comment').innerHTML = 'Eat up or swipe me in  - your local starved off-campus student';
     }
     else
     {
         document.getElementById('show').innerHTML = pointsleft('blue');
-        document.getElementById('comment').innerHTML = 'What is the best food when you are so hungry you could eat a house? Cottage cheese and wall nuts ';
+        document.getElementById('comment').innerHTML = 'I am guessing you are not a breakfast person';
     }
+}

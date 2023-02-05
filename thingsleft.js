@@ -84,7 +84,7 @@ function display(num) {
     else if (num == 2)
     {
         document.getElementById('show').innerHTML = pointsleft('gold');
-        document.getElementById('comment').innerHTML = 'Eat up or swipe me in  - your local starved off-campus student';
+        document.getElementById('comment').innerHTML = 'Eat up or swipe me in, your local starved off campus student';
     }
     else
     {

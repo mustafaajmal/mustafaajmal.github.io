@@ -207,11 +207,16 @@ h3 {
 .gold:hover {
     transition: 0.4s;
     background-color: gold; /* Navy*/
-    color: blue;
+    color: navy;
 }
 
 .banana:hover {
     transition: 0.4s;
     background-color: yellow;
-    color: blue;
+    color: navy;
+}
+
+.bottom{
+    color: navy;
+    font-size: 12px;
 }

@@ -76,20 +76,8 @@ body {
     margin-bottom: 0px;
 }
 
-.par4 {
-    background-color: beige;
-    font-size: 15px;
-    width: 200px;
-    border-radius: 4px;
-    text-align: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    margin-bottom: 0px;
-}
 
-.par5 {
+.par4 {
     background-color: beige;
     font-size: 15px;
     width: 175px;

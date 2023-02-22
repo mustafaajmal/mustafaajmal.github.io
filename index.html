@@ -9,19 +9,18 @@
     <body class = "main">
         <h1 class = "header" style="padding: 0 0 0 0">how many slug points should i have?</h1>
         <p id = "date" class = "days2"></p>
-        <script src="date.js"></script>
+        <script type="module" src="scripts/date/renderDate.js"></script>
         <div id = "daysleft" class = "days2"></div>
-        <script src="thingsleft.js"></script>
-        <p class = "par3">if you have no clue how many slug points to spend...</p>
-        <p class = "par4">this is the website for you!</p>
+        <script src="scripts/remainingForQuarter/thingsleft.js"></script>
+        <p class = "par3">If you have no clue how many slug points to spend<br>this is the website for you!</p>
         <h3>choose your mealplan</h3>
         <div>
-            <script src="thingsleft.js"></script>
+            <script src="scripts/remainingForQuarter/thingsleft.js"></script>
             <button class = "banana" onclick = "display(1)">banana</button>
             <button class = "gold" onclick = "display(2)">gold</button>
             <button class = "blue" onclick = "display(3)">blue</button>
             <div id="show" class = "points"></div>
-            <p id="comment" class = "par5"></p>
+            <p id="comment" class = "par4"></p>
         </div>
         <h1 class = "footer">Created during Cruzhacks 2023... Inspired by the website howmanyf*ckingswipesshouldihave.com, 
             which calculates the number of swipes a UCLA student needs to finish before the end of the quarter, 

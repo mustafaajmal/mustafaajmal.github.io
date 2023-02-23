@@ -237,13 +237,6 @@ h3 {
     margin-right: 10px;
 }
 
-.calculate:hover {
-    transition: 0.4s;
-    background-color: beige;
-    color: navy;
-    border-color: navy;
-}
-
 .rate {
     background-color: beige;
     width: 100px;

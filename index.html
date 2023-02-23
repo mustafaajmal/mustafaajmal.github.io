@@ -9,17 +9,17 @@
     <body class = "main">
         <h1 class = "header" style="padding: 0 0 0 0">how many slug points should i have?</h1>
         <p id = "date" class = "days2"></p>
-        <script type="module" src="scripts/date/renderDate.js"></script>
+        <script type="module" src="scripts/renderDate.js"></script>
         <div id = "daysleft" class = "days2"></div>
-        <script src="scripts/remainingForQuarter/thingsleft.js"></script>
+        <script type="module" src="scripts/renderDaysRemaining.js"></script>
         <p class = "par3">If you have no clue how many slug points to spend<br>this is the website for you!</p>
         <h3>choose your mealplan</h3>
         <div>
-            <script src="scripts/remainingForQuarter/thingsleft.js"></script>
-            <button class = "banana" onclick = "display(1)">banana</button>
-            <button class = "gold" onclick = "display(2)">gold</button>
-            <button class = "blue" onclick = "display(3)">blue</button>
-            <div id="show" class = "points"></div>
+            <script type="module" src="scripts/pointsButtons.js"></script>
+            <input type="button" class="banana" value="banana"></input>
+            <input type="button" class="gold" value="gold"></input>
+            <input type="button" class="blue" value="blue"></input>
+            <div id="pointsRemaining" class="points"></div>
             <p id="comment" class = "par4"></p>
         </div>
         <h1 class = "footer">Created during Cruzhacks 2023... Inspired by the website howmanyf*ckingswipesshouldihave.com, 

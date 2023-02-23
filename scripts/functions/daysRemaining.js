@@ -7,7 +7,6 @@ export function getDaysRemaining () {
 
     var date = new Date;
 
-    console.log(quarterEnd, date);
     const diffTime = quarterEnd - date;     // in milliseconds
     const diffDays = Math.ceil(diffTime / 86400000);   // conversion from milliseconds to days;
     return {diffDays, nextStart};

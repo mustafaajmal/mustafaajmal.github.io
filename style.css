@@ -27,6 +27,7 @@ body {
 .points {
     background-color: beige;
     width: 200px;
+    height: 60px;
     border-radius: 4px;
     font-size: 50px;
     text-align: center;
@@ -81,6 +82,7 @@ body {
     background-color: beige;
     font-size: 15px;
     width: 175px;
+    height: 40px;
     border-radius: 4px;
     text-align: center;
     justify-content: center;
@@ -144,10 +146,6 @@ h3 {
     font-size: 15px;
 }
 
-#predictedPoints {
-    height: 300px;
-    overflow: hidden;
-}
 
 .blue {
     width: 250px;

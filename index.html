@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5B0R1K3ZTF"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-5B0R1K3ZTF');
-        </script>
         <title>slug points</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="favicon.png">
@@ -19,17 +10,26 @@
         <h1 class = "header" style="padding: 0 0 0 0">how many slug points should i have?</h1>
         <p id = "date" class = "days2"></p>
         <script type="module" src="scripts/renderDate.js"></script>
-        <div id = "daysleft" class = "days2"></div>
+        <p id = "daysleft" class = "days2"></p>
         <script type="module" src="scripts/renderDaysRemaining.js"></script>
         <p class = "par3">If you have no clue how many slug points to spend<br>this is the website for you!</p>
-        <h3>choose your mealplan</h3>
         <div>
-            <script type="module" src="scripts/pointsButtons.js"></script>
-            <input type="button" class="banana" value="banana"></input>
-            <input type="button" class="gold" value="gold"></input>
-            <input type="button" class="blue" value="blue"></input>
-            <div id="pointsRemaining" class="points"></div>
-            <p id="comment" class = "par4"></p>
+            <h3>choose your mealplan</h3>
+            <script type="module" src="scripts/pointsButton.js"></script>
+            <input type="button" id="banana" class="banana" value="banana">
+            <input type="button" id="gold" class="gold" value="gold">
+            <input type="button" id="blue" class="blue" value="blue">
+            <div class = predictedPoints>
+                <div id="pointsRemaining" class="points"></div>
+                <p id="comment" class = "par4"></p>
+            </div>
+        </div>
+        <div class="calculator">
+            <p class="par3">Enter your balance to see how much you need to spend daily</p>
+            <script type="module" src="scripts/calcButton.js"></script>
+            <input type="number" class="pointRate" max="9999.99" min="0">
+            <input type="button" id="calculate" class="calculate" value="Calculate">
+            <p id="rate" class="rate"></p>
         </div>
         <h1 class = "footer">Created during Cruzhacks 2023... Inspired by the website howmanyf*ckingswipesshouldihave.com, 
             which calculates the number of swipes a UCLA student needs to finish before the end of the quarter, 

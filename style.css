@@ -204,6 +204,56 @@ h3 {
     color: navy;
 }
 
+.predictedPoints {
+    height: 150px;
+}
+
+.calculator {
+    height: 200px;
+}
+
+.pointRate {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    background-color: beige;
+    color: navy;
+    font-size: 18px;
+    border-radius: 8px;
+    border-style: groove;
+    border-color: navy;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.calculate {
+    width: 100px;
+    height: 55px;
+    text-align: center;
+    background-color: navy;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    border-style: groove;
+    border-color: navy;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.rate {
+    background-color: beige;
+    width: 100px;
+    overflow: auto;
+    border-radius: 4px;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
 .bottom{
     color: navy;
     font-size: 12px;

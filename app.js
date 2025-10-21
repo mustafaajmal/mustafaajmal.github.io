@@ -78,7 +78,6 @@ function getQuarter() {
       { name: "Winter 31", startDate: "01/03/31", endDate: "03/21/31" },
       { name: "Spring 31", startDate: "03/31/31", endDate: "06/12/31" },
       { name: "Summer 31", startDate: "06/23/31", endDate: "08/29/31" }
-      // (Add more here later if you want beyond 2031)
     ]
   };
 
@@ -102,8 +101,8 @@ function getDaysRemaining() {
   const { quarter, nextStart } = getQuarter();
   const quarterEnd = new Date(quarter.endDate);
   const now = new Date();
-  const diffTime = quarterEnd - now;            // ms
-  const diffDays = Math.ceil(diffTime / 86400000); // ms -> days
+  const diffTime = quarterEnd - now;                 // ms
+  const diffDays = Math.ceil(diffTime / 86400000);   // ms -> days
   return { diffDays, nextStart };
 }
 
@@ -150,7 +149,7 @@ function renderPoints(plan) {
   if (0 < diffDays) {
     const pointsEl = document.getElementById('pointsRemaining');
     const commentEl = document.getElementById('comment');
-    if (pointsEl) pointsEl.innerHTML = getPointsRemaining(plan);
+    if (pointsEl) pointsEl.textContent = getPointsRemaining(plan);
 
     let comment;
     if (plan === 'banana') {
@@ -160,21 +159,20 @@ function renderPoints(plan) {
     } else {
       comment = "I'm guessing you're not a breakfast person";
     }
-    if (commentEl) commentEl.innerHTML = comment;
+    if (commentEl) commentEl.textContent = comment;
 
   } else if (diffDays === 0) {
     const pointsEl = document.getElementById('pointsRemaining');
     const commentEl = document.getElementById('comment');
-    if (pointsEl) pointsEl.innerHTML = "ZERO";
-    if (commentEl) commentEl.innerHTML = "I hope you spent all of your points!";
+    if (pointsEl) pointsEl.textContent = "ZERO";
+    if (commentEl) commentEl.textContent = "I hope you spent all of your points!";
   } else {
     const pointsEl = document.getElementById('pointsRemaining');
     const commentEl = document.getElementById('comment');
-    if (pointsEl) pointsEl.innerHTML = "UMM";
-    if (commentEl) commentEl.innerHTML = "The next quarter hasn't begun!";
+    if (pointsEl) pointsEl.textContent = "UMM";
+    if (commentEl) commentEl.textContent = "The next quarter hasn't begun!";
   }
 }
-
 
 function renderRate() {
   const { diffDays } = getDaysRemaining();
@@ -184,9 +182,9 @@ function renderRate() {
 
   const userSlugPoints = +input.value;
   if (diffDays > 0) {
-    rateEl.innerHTML = (userSlugPoints / diffDays).toFixed(2);
+    rateEl.textContent = (userSlugPoints / diffDays).toFixed(2);
   } else {
-    rateEl.innerHTML = "--";
+    rateEl.textContent = "--";
   }
 }
 
@@ -194,18 +192,18 @@ function renderRate() {
 (function init() {
   // date
   const dateEl = document.getElementById("date");
-  if (dateEl) dateEl.innerHTML = formatDate(new Date());
+  if (dateEl) dateEl.textContent = formatDate(new Date());
 
   // days remaining
   const daysEl = document.getElementById("daysleft");
   if (daysEl) {
     const { diffDays, nextStart } = getDaysRemaining();
     if (0 < diffDays) {
-      daysEl.innerHTML = `${diffDays} days left in the quarter`;
+      daysEl.textContent = `${diffDays} days left in the quarter`;
     } else if (diffDays === 0) {
-      daysEl.innerHTML = 'Today is the final day of the quarter!';
+      daysEl.textContent = 'Today is the final day of the quarter!';
     } else {
-      daysEl.innerHTML = `The next quarter starts on ${formatDate(nextStart)}`;
+      daysEl.textContent = `The next quarter starts on ${formatDate(nextStart)}`;
     }
   }
 
@@ -221,7 +219,7 @@ function renderRate() {
   gold?.addEventListener(touchEvent,   () => renderPoints('gold'));
   blue?.addEventListener(touchEvent,   () => renderPoints('blue'));
 
-  // keep your original debug logs (optional)
+  // debug logs (optional)
   console.log(touchEvent);
   console.log(banana);
 

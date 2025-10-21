@@ -163,13 +163,18 @@ function renderPoints(plan) {
     if (commentEl) commentEl.innerHTML = comment;
 
   } else if (diffDays === 0) {
-    document.getElementById('pointsRemaining')?.innerHTML = "ZERO";
-    document.getElementById('comment')?.innerHTML = "I hope you spent all of your points!";
+    const pointsEl = document.getElementById('pointsRemaining');
+    const commentEl = document.getElementById('comment');
+    if (pointsEl) pointsEl.innerHTML = "ZERO";
+    if (commentEl) commentEl.innerHTML = "I hope you spent all of your points!";
   } else {
-    document.getElementById('pointsRemaining')?.innerHTML = "UMM";
-    document.getElementById('comment')?.innerHTML = "The next quarter hasn't begun!";
+    const pointsEl = document.getElementById('pointsRemaining');
+    const commentEl = document.getElementById('comment');
+    if (pointsEl) pointsEl.innerHTML = "UMM";
+    if (commentEl) commentEl.innerHTML = "The next quarter hasn't begun!";
   }
 }
+
 
 function renderRate() {
   const { diffDays } = getDaysRemaining();
